@@ -1,0 +1,40 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet' href='/bootstrap-5.3.3-dist/css/bootstrap.css')
+  title Document
+.container
+ form.row.g-3(action="register" method="POST")#userform
+  .col-md-6
+    label.form-label(for='inputEmail4') Email
+    input#inputEmail4.form-control(type='email' name="email")
+  .col-md-6
+    label.form-label(for='inputPassword4') Password
+    input#inputPassword4.form-control(type='password' name="password")
+  .col-6
+    label.form-label(for='inputAddress') Address
+    input#inputAddress.form-control(type='text' placeholder='1234 Main St' name="address")
+  .col-6
+    label.form-label(for='inputAddress2') Address 2
+    input#inputAddress2.form-control(type='text' placeholder='Apartment, studio, or floor' name="address2")
+  .col-md-6
+    label.form-label(for='inputCity') City
+    input#inputCity.form-control(type='text' name="city")
+  .col-md-4
+    label.form-label(for='inputState') State
+    select#inputState.form-select 
+      option(selected='' name="state") Choose...
+      option ...
+  .col-md-2
+    label.form-label(for='inputZip') Zip
+    input#inputZip.form-control(type='text' name ="zip")
+  .col-12
+    .form-check
+      input#gridCheck.form-check-input(type='checkbox')
+      label.form-check-label(for='gridCheck')
+        | Check me out
+  .col-12
+    button.btn.btn-primary(type='submit') Sign in
+script(src='/bootstrap-5.3.3-dist/js/bootstrap.bundle.js')
+script(src="/js/form.js") 
